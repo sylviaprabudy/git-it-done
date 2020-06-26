@@ -3,6 +3,7 @@ var limitWarningEl = document.querySelector("#limit-warning");
 var repoNameEl = document.querySelector("#repo-name");
 
 var getRepoIssues = function (repo) {
+    // format the github api url
     var apiUrl = "https://api.github.com/repos/" + repo + "/issues?direction=asc";
 
     // make a get request to url
@@ -21,8 +22,7 @@ var getRepoIssues = function (repo) {
         }
         else {
             // if not successful, redirect to homepage
-            //document.location.replace("./index.html");
-            alert("There was a problem with your request!");
+            document.location.replace("./index.html");
         }
     });
 };
@@ -96,5 +96,5 @@ var displayWarning = function (repo) {
 };
 
 
-getRepoIssues();
+
 getRepoName();

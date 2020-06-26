@@ -1,5 +1,7 @@
 var repoContainerEl = document.querySelector("#repos-container");
 var repoSearchTerm = document.querySelector("#repo-search-term");
+var userFormEl = document.querySelector("#user-form");
+var nameInputEl = document.querySelector("#username");
 
 var getUserRepos = function (user) {
     // format the github api url
@@ -23,9 +25,6 @@ var getUserRepos = function (user) {
         });
 };
 
-
-var userFormEl = document.querySelector("#user-form");
-var nameInputEl = document.querySelector("#username");
 
 var formSubmitHandler = function (event) {
     event.preventDefault();
